@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header>
+    <button id="generate">Generate</button>
+    <label>Size <input id="size" type="range" min="5" max="150" value="20"></label>
+    <label>Speed <input id="speed" type="range" min="1" max="100" value="50"></label>
+    <select id="algo">
+      <option value="bubble">Bubble Sort — O(n²)</option>
+      <option value="insertion">Insertion Sort — O(n²)</option>
+      <option value="merge">Merge Sort — O(n log n)</option>
+    </select>
+    <button class="primary" id="run">Run</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+    <div id="stats">
+      <div>Comparisons: <span id="comparisons">0</span></div>
+      <div>Swaps: <span id="swaps">0</span></div>
+      <div>Writes: <span id="writes">0</span></div>
+    </div>
+  </header>
+
+  <svg id="chart" width="100%"></svg>
+  <footer>&copy; Kyle Deliyannides — SFU CS • D3.js • Typescript</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> 
+  <script src="index.js"></script>
+</body>
+</html>
